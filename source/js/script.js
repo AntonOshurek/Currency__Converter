@@ -8,11 +8,3 @@ async function getCurrencies () {
 }
 
 getCurrencies();
-
-const input = document.querySelector('.input');
-const text = document.querySelector('.text');
-
-input.addEventListener('input', (e) => {
-    console.log(e.data);
-    text.textContent = `вы ввели число - ${e.data}`;
-});

@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css">
-    <title>Currency Converter</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Currency Converter</title>
 </head>
-<body class="body">
-    <h1>Currency Converter</h1>
-    <input class="input" type="number" placeholder="number">
-    <p class="text"></p>
+<body class="body body--container">
+  <section class="converter">
+    <h1 class="converter__title">Converter</h1>
+    <div class="converter__inputs">
+      <label class="converter__lable converter__lable--first" for="first-currency">first</label>
+      <select class="converter__select converter__select--first" name="first-currency" id="first-currency">
+        <option class="converter__select--value" value="first-value" selected>first-currency</option>
+        <option class="converter__select--value" value="first-value" selected>first-currency</option>
+        <option class="converter__select--value" value="first-value" selected>first-currency</option>
+      </select>
+      <input class="converter__input converter__input--first" type="number">
+      <label class="converter__lable converter__lable--second" for="second-currency">second</label>
+      <select class="converter__select converter__select--second" name="second-currency" id="second-currency">
+        <option class="converter__select--value" value="second-value" selected>second-currency</option>
+        <option class="converter__select--value" value="second-value" selected>second-currency</option>
+        <option class="converter__select--value" value="second-value" selected>second-currency</option>
+      </select>
+      <input class="converter__input converter__input--second" type="number">
+    </div>
+  </section>
 
-    <script src="js/script.min.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 </html>
