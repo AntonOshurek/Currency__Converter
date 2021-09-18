@@ -24,7 +24,7 @@ function showValute(val) {
     //const valName = val[key];
 
    displayValute += `
-    <option class="converter__select--value" value="first-value" selected>${val[key].Name}</option>
+    <option class="converter__select--value" value="${val[key].CharCode}" selected>${val[key].Name}</option>
     `;
 
     selectFirst.innerHTML = displayValute;
