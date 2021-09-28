@@ -1,0 +1,36 @@
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: min-content;
+}
+
+.time__wrap {
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.time__title {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.time__items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  justify-content: center;
+  grid-column-gap: 15px;
+}
+
+.time__item {
+  font-size: 20px;
+  font-weight: bold;
+  justify-self: center;
+}

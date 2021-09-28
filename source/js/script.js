@@ -85,3 +85,5 @@ function currencyCalculation(firstValue, secondValue, firstValute, secondValute)
   let val = firstValue * firstObgValute.nominal * secondObgValute.value / secondObgValute.nominal * firstObgValute.value;
   console.log(val);
 };
+
+//time logick
