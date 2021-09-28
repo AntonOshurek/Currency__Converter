@@ -7,23 +7,36 @@
   <link rel="stylesheet" href="css/style.min.css">
   <title>Currency Converter</title>
 </head>
-<body class="body body--container">
+<body class="body">
+  <section class="time">
+    <div class="time__wrap">
+      <h2 class="time__title">Time</h2>
+      <div class="time__items">
+        <span class="time__item time__item--horse">15</span>
+        <span class="time__item">:</span>
+        <span class="time__item time__item--minutes">15</span>
+        <span class="time__item">:</span>
+        <span class="time__item time__item--seconds">05</span>
+      </div>
+    </div>
+  </section>
   <section class="converter">
-    <h1 class="converter__title">Converter</h1>
-    <div class="converter__inputs">
-      <!--first currency inputs-->
-      <label class="converter__lable converter__lable--first" for="first-currency">first currency</label>
-      <select class="converter__select converter__select--first" name="first-currency" id="first-currency">
-        <option class="converter__select--value" value="first-value" selected>first-currency</option>
-      </select>
-      <input class="converter__input converter__input--first" type="number" placeholder="first currency" min="0">
-      <!--second currency inputs-->
-      <label class="converter__lable converter__lable--second" for="second-currency">second currency</label>
-      <select class="converter__select converter__select--second" name="second-currency" id="second-currency">
-        <option class="converter__select--value" value="second-value" selected>second-currency</option>
-      </select>
-      <input class="converter__input converter__input--second" type="number" placeholder="second currency" min="0">
-
+    <div class="converter__wrap">
+      <h1 class="converter__title">Currency Converter</h1>
+      <div class="converter__inputs">
+        <!--first currency inputs-->
+        <label class="converter__lable converter__lable--first" for="first-currency">first currency</label>
+        <select class="converter__select converter__select--first" name="first-currency" id="first-currency">
+          <option class="converter__select--value" value="first-value" selected>first-currency</option>
+        </select>
+        <input class="converter__input converter__input--first" type="number" placeholder="first currency" min="0">
+        <!--second currency inputs-->
+        <label class="converter__lable converter__lable--second" for="second-currency">second currency</label>
+        <select class="converter__select converter__select--second" name="second-currency" id="second-currency">
+          <option class="converter__select--value" value="second-value" selected>second-currency</option>
+        </select>
+        <input class="converter__input converter__input--second" type="number" placeholder="second currency" min="0">
+      </div>
     </div>
   </section>
 
