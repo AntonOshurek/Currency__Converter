@@ -8,10 +8,11 @@ const gulp = require('gulp'),
       htmlmin = require('gulp-htmlmin'),
       csso = require('postcss-csso'),
       rename = require('gulp-rename'),
-      terser = require('gulp-terser'),
+      //terser = require('gulp-terser'),
       squoosh = require('gulp-libsquoosh'),
       webp = require("gulp-webp"),
       del = require('del');
+      webpack = require("webpack-stream");
 
 // Styles
 const styles = () => {
@@ -38,12 +39,37 @@ const html = () => {
 };
 exports.html = html;
 
-//js terser
+//js webpack
 const script = () => {
-    return gulp.src('source/js/script.js')
-      .pipe(terser())
-      .pipe(rename('script.min.js'))
-      .pipe(gulp.dest('build/js'));
+  return gulp.src('source/scripts/index.js')
+  .pipe(webpack({
+    mode: 'development',
+    output: {
+      filename: 'bundle.js'
+    },
+    watch: false,
+    devtool: "source-map",
+    module: {
+      rules: [
+        {
+          test: /\.m?js$/,
+          exclude: /(node_modules|bower_components)/,
+          use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [['@babel/preset-env', {
+              debug: true,
+              corejs: 3,
+              useBuiltIns: "usage"
+            }]]
+          }
+          }
+        }
+      ]
+    }
+  }))
+  .pipe(gulp.dest('build/js'))
+  .pipe(sync.stream());
 }
 exports.script = script;
 
