@@ -18,4 +18,7 @@ export default function clock() {
   };
   updateclock();
   const timeInterva = setInterval(updateclock, 1000);
+
+  const date = new Date().getUTCDate;
+  console.log('sjdhfksjd');
 };

@@ -85,10 +85,3 @@ export default function converter() {
     console.log(val);
   };
 };
-
-//time logick
-
-/*function getTime() {
-
-};
-getTime();*/
