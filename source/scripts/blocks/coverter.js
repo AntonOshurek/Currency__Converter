@@ -14,7 +14,7 @@ export default function converter() {
   function showValute(val) {
 
       valute = val.Valute;
-      console.log(valute);
+      //console.log(valute);
       let displayValute;
 
     for (let key in valute) {
@@ -68,7 +68,6 @@ export default function converter() {
           nominal: valute[key].Nominal,
           value: valute[key].Value
         };
-        //console.log(firstObgValute);
       }
 
       if (valute[key].CharCode == secondValute) {
@@ -76,12 +75,9 @@ export default function converter() {
           nominal: valute[key].Nominal,
           value: valute[key].Value
         };
-        //console.log(secondObgValute);
       }
     }
-    console.log(firstObgValute);
-    console.log(secondObgValute);
-    let val = firstValue * firstObgValute.nominal * secondObgValute.value / secondObgValute.nominal * firstObgValute.value;
-    console.log(val);
   };
+
+  return valute;
 };
