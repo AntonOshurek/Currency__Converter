@@ -19,7 +19,7 @@ export default function valuteList() {
       //valuteItems.push(valute[key])
       let val = `
       <li class="valute__item">
-      <p class="valute__info valute__from">${valute[key].CharCode}</p>
+      <p class="valute__info valute__from">${valute[key].Name}</p>
       <p class="valute__info valute__amout">${valute[key].Nominal}</p>
       <p class="valute__info valute__to">${valute[key].Value} <span>$</span></p>
     </li>
