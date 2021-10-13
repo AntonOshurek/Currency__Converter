@@ -16,11 +16,18 @@ export default function valuteList() {
     const valuteItems = [];
 
     for(let key in valute) {
-      valuteItems.push(valute[key])
+      //valuteItems.push(valute[key])
+      let val = `
+      <li class="valute__item">
+      <p class="valute__info valute__from">${valute[key].CharCode}</p>
+      <p class="valute__info valute__amout">${valute[key].Nominal}</p>
+      <p class="valute__info valute__to">${valute[key].Value} <span>$</span></p>
+    </li>
+      `;
+      valuteItems.push(val);
     }
 
-    console.log(valuteItems)
-
+    valuteList.innerHTML = valuteItems;
   }
 
 }
