@@ -1,4 +1,4 @@
-export default function converter() {
+export default function converter(data) {
   const selectFirst = document.querySelector('.converter__select--first');
   const selectSecond = document.querySelector('.converter__select--second');
 
@@ -7,13 +7,13 @@ export default function converter() {
 
   let valute = '';
 
-  fetch('https://www.cbr-xml-daily.ru/daily_json.js')
-      .then(response => response.json())
-      .then(json => showValute(json))
+  // fetch('https://www.cbr-xml-daily.ru/daily_json.js')
+  //     .then(response => response.json())
+  //     .then(json => showValute(json))
 
-  function showValute(val) {
+  function showValute() {
 
-      valute = val.Valute;
+      valute = data.Valute;
       //console.log(valute);
       let displayValute;
 
@@ -28,6 +28,8 @@ export default function converter() {
     }
     checkCurrentValute();
   };
+
+  showValute(data);
 
   function checkCurrentValute() {
     let firstValue = '';
