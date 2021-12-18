@@ -1,19 +1,26 @@
 const selectFirst = document.querySelector('.converter__select--first');
 const selectSecond = document.querySelector('.converter__select--second');
+const valuteItem = document.querySelector('#valute-item');
 
-const showValute = (data) => {
+const getValuteList = (data) => {
   let valuteObj = data.Valute;
-
-  let displayValute;
+  const fragment = new DocumentFragment();
 
   for (let key in valuteObj) {
-    displayValute += `
-      <option class="converter__select--value" value="${valuteObj[key].CharCode}"
-      selected>${valuteObj[key].Name}</option>`;
+    const templateItem = valuteItem.content.cloneNode(true);
+
+    templateItem.querySelector('.converter__select--value').value = valuteObj[key].CharCode;
+    templateItem.querySelector('.converter__select--value').textContent = valuteObj[key].Name;
+
+    fragment.append(templateItem);
   }
 
-  selectFirst.innerHTML = displayValute;
-  selectSecond.innerHTML = displayValute;
+  return fragment;
+}
+
+const showValute = (data) => {
+  selectFirst.append(getValuteList(data));
+  selectSecond.append(getValuteList(data));
 }
 
 export {showValute};
