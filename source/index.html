@@ -8,6 +8,7 @@
   <title>Currency Converter</title>
 </head>
 <body class="body">
+
   <section class="time">
     <div class="time__wrap">
       <h2 class="time__title">Time</h2>
@@ -20,6 +21,7 @@
       </div>
     </div>
   </section>
+
   <section class="converter">
     <div class="converter__wrap">
       <h1 class="converter__title">Currency Converter</h1>
@@ -39,28 +41,10 @@
       </div>
     </div>
   </section>
-  <section class="valute">
-    <h2 class="valute__title">Valute list</h2>
-      <ul class="valute__list">
-      <!--
-        <li class="valute__item">
-          <p class="valute__info valute__from">BYN</p>
-          <p class="valute__info valute__amout">2.6</p>
-          <p class="valute__info valute__to">1 <span>$</span></p>
-        </li>
-        <li class="valute__item">
-          <p class="valute__info valute__from">RUB</p>
-          <p class="valute__info valute__amout">75</p>
-          <p class="valute__info valute__to">1 <span>$</span></p>
-        </li>
-        <li class="valute__item">
-          <p class="valute__info valute__from">PLN</p>
-          <p class="valute__info valute__amout">3.65</p>
-          <p class="valute__info valute__to">1 <span>$</span></p>
-        </li>
-      -->
-      </ul>
-  </section>
+
+  <template id="valute-item">
+    <option class="converter__select--value" value="" selected></option>
+  </template>
 
   <script src="js/bundle.js"></script>
 </body>
