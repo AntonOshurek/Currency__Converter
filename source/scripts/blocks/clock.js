@@ -12,30 +12,41 @@ export default function clock() {
     }
   };
 
-  const checkHourse = (time) => {
-    if(time > 1 && time < 5) {
+  const checkHourse = (hourse) => {
+    if(hourse > 1 && hourse < 5) {
       return 'часа';
     }
 
-    if(time >= 5 && time < 21) {
+    if(hourse >= 5 && hourse < 21) {
       return 'часов';
     }
 
-    if(time > 21 && time < 25) {
+    if(hourse > 21 && hourse < 25) {
       return 'часа';
     }
 
-    if(time == 1 || time == 21) {
+    if(hourse === 1 || hourse === 21) {
       return 'час';
     }
   }
 
-  console.log(checkHourse(21))
-
+ const checkMinutes = (minutes) => {
+   let minutesString = minutes.toString();
+  //  console.log(minutes)
+  if(minutes === 1 || (minutes > 11 && (minutesString[1] == 1))) {
+    return 'минута';
+  }
+  if(minutes > 1 && minutes <= 4 || (minutes > 20 && (minutesString[1] < 5 && minutesString[1] > 1))) {
+    return 'минуты';
+  }
+  if(minutes >= 5 && minutes <= 20 || (minutes >= 20 && (minutesString[1] == 0)) || (minutes > 20 && (minutesString[1] >= 5 && minutesString[1] <= 9)) || minutes == 0) {
+    return 'минут';
+  }
+ }
 
   const updateclock = () => {
     horse.textContent = `${getZero(new Date().getHours())} ${checkHourse(new Date().getHours())}`;
-    minutes.textContent = `${getZero(new Date().getMinutes())}`;
+    minutes.textContent = `${getZero(new Date().getMinutes())} ${checkMinutes(new Date().getHours())}`; // ${checkMinutes(new Date().getHours())}
     // seconds.textContent = getZero(new Date().getSeconds());
   };
 
