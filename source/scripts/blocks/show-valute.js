@@ -19,8 +19,8 @@ const getValuteList = (data) => {
 }
 
 const showValute = (data) => {
-  selectFirst.append(getValuteList(data));
-  selectSecond.append(getValuteList(data));
+  // selectFirst.append(getValuteList(data));
+  // selectSecond.append(getValuteList(data));
 }
 
 export {showValute};

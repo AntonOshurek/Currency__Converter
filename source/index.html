@@ -8,39 +8,29 @@
   <title>Currency Converter</title>
 </head>
 <body class="body">
-
-  <section class="time">
-    <div class="time__wrap">
-      <h2 class="time__title">Time</h2>
-      <div class="time__items">
-        <span class="time__item time__item--horse">15</span>
-        <span class="time__item">:</span>
-        <span class="time__item time__item--minutes">15</span>
-        <span class="time__item">:</span>
-        <span class="time__item time__item--seconds">05</span>
+  <header class="header">
+    <div class="header__wrap">
+      <div class="container header__inners">
+        <div class="header__description">
+          <h1 class="header__title">Canval</h1>
+          <p class="header__subtitle">твой конвертер валют:)</p>
+        </div>
+        <div class="clock">
+          <span class="clock__hourse clock__text">16 часов</span>
+          <span class="hourse__delimiter clock__text">/</span>
+          <span class="clock__minutes clock__text">32 минуты</span>
+        </div>
       </div>
     </div>
-  </section>
 
-  <section class="converter">
-    <div class="converter__wrap">
-      <h1 class="converter__title">Currency Converter</h1>
-      <div class="converter__inputs">
-        <!--first currency inputs-->
-        <label class="converter__lable converter__lable--first" for="first-currency">first currency</label>
-        <select class="converter__select converter__select--first" name="first-currency" id="first-currency">
-          <option class="converter__select--value" value="first-value" selected>first-currency</option>
-        </select>
-        <input class="converter__input converter__input--first" type="number" placeholder="first currency" min="0">
-        <!--second currency inputs-->
-        <label class="converter__lable converter__lable--second" for="second-currency">second currency</label>
-        <select class="converter__select converter__select--second" name="second-currency" id="second-currency">
-          <option class="converter__select--value" value="second-value" selected>second-currency</option>
-        </select>
-        <input class="converter__input converter__input--second" type="number" placeholder="second currency" min="0">
-      </div>
-    </div>
-  </section>
+
+  </header>
+  <main class="main">
+
+  </main>
+  <footer class="footer">
+
+  </footer>
 
   <template id="valute-item">
     <option class="converter__select--value" value="" selected></option>
